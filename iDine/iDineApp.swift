@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct iDineApp: App {
+    @StateObject var cart = Order()
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MainView()
+                .environmentObject(cart)
         }
     }
 }

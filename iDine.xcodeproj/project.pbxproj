@@ -16,6 +16,8 @@
 		344389322863524A003A5FAD /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3443892E2863524A003A5FAD /* Menu.swift */; };
 		344389332863524A003A5FAD /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3443892F2863524A003A5FAD /* Helper.swift */; };
 		3443893728635A04003A5FAD /* FoodDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3443893628635A04003A5FAD /* FoodDetails.swift */; };
+		344389392863FD20003A5FAD /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 344389382863FD20003A5FAD /* MainView.swift */; };
+		3443893B2863FD62003A5FAD /* OrderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3443893A2863FD62003A5FAD /* OrderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +31,8 @@
 		3443892E2863524A003A5FAD /* Menu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
 		3443892F2863524A003A5FAD /* Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		3443893628635A04003A5FAD /* FoodDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodDetails.swift; sourceTree = "<group>"; };
+		344389382863FD20003A5FAD /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		3443893A2863FD62003A5FAD /* OrderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +73,8 @@
 				34438920286351E2003A5FAD /* ContentView.swift */,
 				3443893628635A04003A5FAD /* FoodDetails.swift */,
 				34438922286351E3003A5FAD /* Assets.xcassets */,
+				344389382863FD20003A5FAD /* MainView.swift */,
+				3443893A2863FD62003A5FAD /* OrderView.swift */,
 				34438924286351E3003A5FAD /* Preview Content */,
 			);
 			path = iDine;
@@ -154,6 +160,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				3443893728635A04003A5FAD /* FoodDetails.swift in Sources */,
+				3443893B2863FD62003A5FAD /* OrderView.swift in Sources */,
+				344389392863FD20003A5FAD /* MainView.swift in Sources */,
 				344389302863524A003A5FAD /* Order.swift in Sources */,
 				34438921286351E2003A5FAD /* ContentView.swift in Sources */,
 				344389332863524A003A5FAD /* Helper.swift in Sources */,
