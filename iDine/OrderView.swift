@@ -15,18 +15,26 @@ struct OrderView: View {
             Section{
                 ForEach(cartItems.items){ cartItem in
                     HStack{
-                        NavigationLink(cartItem.name, destination: FoodDetails(food: cartItem))
+                        if(!cartItem.name.isEmpty){
+                            NavigationLink(cartItem.name, destination: FoodDetails(food: cartItem))
+                        } else{
+                            NavigationLink("Empty Cart", destination: EmptyView())
+                        }
+//                        Check back later!!!
                     }
                 }
                 .onDelete{indexSet in cartItems.items.remove(atOffsets: indexSet)}
             }
             Section{
                 Text(cartItems.total, format: .currency(code: Locale.current.currencyCode ?? "USD"))
+                    .font(.largeTitle)
+                    .fontWeight(.bold)
+                    .padding(.vertical)
+            }header: {
+                Text("Total Price")
             }
             Section{
-                Button{
-                    
-                } label: {
+                NavigationLink(destination: CheckOut()){
                     Label("Order Now", systemImage: "arrow.right")
                 }
             }

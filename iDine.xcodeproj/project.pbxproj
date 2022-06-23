@@ -18,6 +18,8 @@
 		3443893728635A04003A5FAD /* FoodDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3443893628635A04003A5FAD /* FoodDetails.swift */; };
 		344389392863FD20003A5FAD /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 344389382863FD20003A5FAD /* MainView.swift */; };
 		3443893B2863FD62003A5FAD /* OrderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3443893A2863FD62003A5FAD /* OrderView.swift */; };
+		34438941286446EE003A5FAD /* CheckOut.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34438940286446EE003A5FAD /* CheckOut.swift */; };
+		3443894328644E45003A5FAD /* Receipt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3443894228644E45003A5FAD /* Receipt.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +35,8 @@
 		3443893628635A04003A5FAD /* FoodDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodDetails.swift; sourceTree = "<group>"; };
 		344389382863FD20003A5FAD /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		3443893A2863FD62003A5FAD /* OrderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderView.swift; sourceTree = "<group>"; };
+		34438940286446EE003A5FAD /* CheckOut.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckOut.swift; sourceTree = "<group>"; };
+		3443894228644E45003A5FAD /* Receipt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Receipt.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +80,8 @@
 				344389382863FD20003A5FAD /* MainView.swift */,
 				3443893A2863FD62003A5FAD /* OrderView.swift */,
 				34438924286351E3003A5FAD /* Preview Content */,
+				34438940286446EE003A5FAD /* CheckOut.swift */,
+				3443894228644E45003A5FAD /* Receipt.swift */,
 			);
 			path = iDine;
 			sourceTree = "<group>";
@@ -159,7 +165,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3443894328644E45003A5FAD /* Receipt.swift in Sources */,
 				3443893728635A04003A5FAD /* FoodDetails.swift in Sources */,
+				34438941286446EE003A5FAD /* CheckOut.swift in Sources */,
 				3443893B2863FD62003A5FAD /* OrderView.swift in Sources */,
 				344389392863FD20003A5FAD /* MainView.swift in Sources */,
 				344389302863524A003A5FAD /* Order.swift in Sources */,

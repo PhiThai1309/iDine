@@ -20,7 +20,7 @@ struct MainView: View {
                     .tag(1)
                 OrderView()
                     .tabItem{
-                        Label("Order", systemImage: "list.dash")
+                        Label("Order", systemImage: "cart")
                     }
                     .tag(2)
             }.navigationTitle((view == 1) ? "iDine": "Order")

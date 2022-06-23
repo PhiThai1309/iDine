@@ -63,7 +63,7 @@ struct FoodDetails: View {
                         cartItems.add(item: food)
                         print(cartItems.items[0])
                     } label: {
-                        Label("Add to cart", systemImage: "cart")
+                        Label("Add to cart", systemImage: "cart.badge.plus")
                     }
                 }
                 
