@@ -11,19 +11,17 @@ struct MainView: View {
     @State var view = 1
     
     var body: some View {
-        NavigationView{
-            TabView(selection: $view){
-                ContentView()
-                    .tabItem{
-                        Label("Menu", systemImage: "list.dash")
-                    }
-                    .tag(1)
-                OrderView()
-                    .tabItem{
-                        Label("Order", systemImage: "cart")
-                    }
-                    .tag(2)
-            }.navigationTitle((view == 1) ? "iDine": "Order")
+        TabView(selection: $view){
+            ContentView()
+                .tabItem{
+                    Label("Menu", systemImage: "list.dash")
+                }
+                .tag(1)
+            OrderView()
+                .tabItem{
+                    Label("Order", systemImage: "cart")
+                }
+                .tag(2)
         }
     }
 }

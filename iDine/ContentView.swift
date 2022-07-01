@@ -11,30 +11,32 @@ struct ContentView: View {
     let menu = Bundle.main.decode([MenuSection].self, from: "menu.json")
     
     var body: some View {
-        VStack{
-            Form{
-                ForEach(menu) { course in
-                    Section{
-                        ForEach(course.items) { food in
-                            NavigationLink(destination: FoodDetails(food: food)){
-                                Label{
-                                    Text(food.name)
-                                    
-                                } icon: {
-                                    Image(food.thumbnailImage)
-                                        .clipShape(Circle())
-                                }
-                                Spacer()
-                                ForEach(food.restrictions, id: \.self){ restriction in
-                                    Text(restriction)
+        NavigationView{
+            VStack{
+                Form{
+                    ForEach(menu) { course in
+                        Section{
+                            ForEach(course.items) { food in
+                                NavigationLink(destination: FoodDetails(food: food)){
+                                    Label{
+                                        Text(food.name)
+                                        
+                                    } icon: {
+                                        Image(food.thumbnailImage)
+                                            .clipShape(Circle())
+                                    }
+                                    Spacer()
+                                    ForEach(food.restrictions, id: \.self){ restriction in
+                                        Text(restriction)
+                                    }
                                 }
                             }
+                        } header: {
+                            Text(course.name)
                         }
-                    } header: {
-                        Text(course.name)
                     }
                 }
-            }
+            }.navigationTitle("Menu")
         }
     }
 }

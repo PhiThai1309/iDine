@@ -11,33 +11,38 @@ struct OrderView: View {
     @EnvironmentObject var cartItems: Order
     
     var body: some View {
-        List{
-            Section{
-                ForEach(cartItems.items){ cartItem in
-                    HStack{
-                        if(!cartItem.name.isEmpty){
-                            NavigationLink(cartItem.name, destination: FoodDetails(food: cartItem))
-                        } else{
-                            NavigationLink("Empty Cart", destination: EmptyView())
+        NavigationView{
+            List{
+                Section{
+                    ForEach(cartItems.items){ cartItem in
+                        HStack{
+                            if(!cartItem.name.isEmpty){
+                                NavigationLink(cartItem.name, destination: FoodDetails(food: cartItem))
+                            } else{
+                                NavigationLink("Empty Cart", destination: EmptyView())
+                            }
+    //                        Check back later!!!
                         }
-//                        Check back later!!!
+                    }
+                    .onDelete{indexSet in cartItems.items.remove(atOffsets: indexSet)}
+                }
+                Section{
+                    Text(cartItems.total, format: .currency(code: Locale.current.currencyCode ?? "USD"))
+                        .font(.largeTitle)
+                        .fontWeight(.bold)
+                        .padding(.vertical)
+                }header: {
+                    Text("Total Price")
+                }
+                Section{
+                    NavigationLink(destination: CheckOut()){
+                        Label("Order Now", systemImage: "arrow.right")
                     }
                 }
-                .onDelete{indexSet in cartItems.items.remove(atOffsets: indexSet)}
-            }
-            Section{
-                Text(cartItems.total, format: .currency(code: Locale.current.currencyCode ?? "USD"))
-                    .font(.largeTitle)
-                    .fontWeight(.bold)
-                    .padding(.vertical)
-            }header: {
-                Text("Total Price")
-            }
-            Section{
-                NavigationLink(destination: CheckOut()){
-                    Label("Order Now", systemImage: "arrow.right")
+            }.navigationTitle("Order")
+                .toolbar{
+                    EditButton()
                 }
-            }
         }
     }
 }
